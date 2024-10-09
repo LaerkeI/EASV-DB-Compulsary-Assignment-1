@@ -1,4 +1,5 @@
 # EASV-DB-Compulsary-Assignment-1
+Please view the README in raw/code format.  
 
 # Instructions for setting up the project.
 The project is implemented in .NET 7 and you need these three package for .NET 7: 
@@ -24,8 +25,17 @@ If you want the up-to-date migrations, run this command:
 - dotnet ef migrations add AddProductRatings
 
 # Documentation for the EF Core migrations.
-Part 2 Task 4: Merge and Conflict Resolution: When merging ef/initial-setup, ef/add-categories and ef/add-ratings into main-ef, there were several merge conflicts. 
-They were handle by merging the branches in order of creation and accepting the changes from the branch merging into main-ef, as each branch just extends the previous code.
+Before you create migrations, you need to define your data model which is made up of DbContext.cs (or a class that inherites DbContext.cs) and Entities. 
+Each DbSet<TEntity> properties in ApplicationContext.cs represent tables in the database.
+
+After defining the data model, you can create a migration based on your current model by running this command:
+- dotnet ef migrations add <MigrationName>
+
+Once the migration is created, you need to apply it to the database by running this command: 
+- dotnet ef database update
+
+How "Part 2 Task 4: Merge and Conflict Resolution" was solved: When merging ef/initial-setup, ef/add-categories and ef/add-ratings into main-ef, there were several merge conflicts. 
+They were handle by merging the branches in order of creation and accepting the changes from the branch merging into main-ef, as each branch just extends the previous code.)
 
 # Rollback instructions for EF Core migrations.
 Part 2 Task 5: Rollback Plan: If you want to rollback the last migration, you can use the automatically generated Down() method by specifying the previous migration.
