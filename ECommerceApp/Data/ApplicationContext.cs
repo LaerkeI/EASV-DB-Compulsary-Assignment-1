@@ -7,6 +7,7 @@ namespace ECommerceApp.Data
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ProductRating> ProductRatings { get; set; }
 
         // The connection string for SQL Server database
         protected override void OnConfiguring(DbContextOptionsBuilder options)
