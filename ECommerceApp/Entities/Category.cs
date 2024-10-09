@@ -1,4 +1,4 @@
-﻿namespace ECommerceApp.Entities
+namespace ECommerceApp.Entities
 {
     public class Category
     {

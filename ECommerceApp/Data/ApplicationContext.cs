@@ -1,7 +1,5 @@
-﻿using ECommerceApp.Entities;
+using ECommerceApp.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace ECommerceApp.Data
 {
@@ -16,7 +14,6 @@ namespace ECommerceApp.Data
         {
             var connectionString = "Server=localhost;Database=EASV-DB-Compulsary-Assignment-1;User Id=sa;Password=YourStrong!Passw0rd;Encrypt=false;";
             options.UseSqlServer(connectionString);
-
         }
     }
 }
